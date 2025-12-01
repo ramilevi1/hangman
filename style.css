@@ -3,7 +3,8 @@
     --card-bg: #1e293b;
     --text-primary: #f1f5f9;
     --text-secondary: #94a3b8;
-    --accent-color: #06b6d4; /* Cyan */
+    --accent-color: #06b6d4;
+    /* Cyan */
     --accent-glow: rgba(6, 182, 212, 0.5);
     --danger-color: #ef4444;
     --success-color: #22c55e;
@@ -20,11 +21,12 @@ body {
     font-family: var(--font-main);
     background-color: var(--bg-color);
     color: var(--text-primary);
-    height: 100vh;
+    min-height: 100vh;
+    /* Use min-height to allow scrolling */
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    /* overflow: hidden;  Removed to allow scrolling on mobile when keyboard opens */
 }
 
 .app-container {
@@ -52,8 +54,15 @@ body {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Welcome Screen */
@@ -152,7 +161,8 @@ input[type="text"]:focus {
 }
 
 .draw.part {
-    display: none; /* Hidden initially */
+    display: none;
+    /* Hidden initially */
     stroke: var(--danger-color);
     filter: drop-shadow(0 0 5px rgba(239, 68, 68, 0.5));
 }
@@ -183,8 +193,15 @@ input[type="text"]:focus {
 }
 
 @keyframes popIn {
-    from { transform: scale(0); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .keyboard {
@@ -200,7 +217,7 @@ input[type="text"]:focus {
     width: 40px;
     height: 40px;
     background-color: var(--card-bg);
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     color: var(--text-primary);
     font-weight: 600;
