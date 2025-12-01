@@ -37,7 +37,3 @@ To run this game locally:
 *   CSS3 (Variables, Flexbox, Animations)
 *   JavaScript (ES6+)
 *   Google Fonts (Outfit)
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
